@@ -19,12 +19,14 @@ def play_game():
         print("Invalid difficulty choice. Please choose 'easy' or ' hard'.")
         return
 
-    while attempts > 0:
+    is_guessed = False
+    
+    while attempts > 0 and not is_guessed:
         print(f"You have {attempts} attempts remaining to guess the number.")
         guess = int(input("Make a guess: "))
         if guess == generated_number:
             print(f"You got it! The answer was {generated_number}.")
-            break
+            is_guessed = True
         elif guess > generated_number:
             print("Too high.")
         elif guess < generated_number:
