@@ -1,8 +1,11 @@
 import random
+import art
+from art import logo
 
 def play_game():
     generated_number = random.randint(1, 100)
     
+    print(logo)
     print("Welcome to the Number Guessing Game!")
     print("I'm thinking of a number between 1 and 100.")
     
